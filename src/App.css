@@ -1,39 +1,277 @@
-.App {
-  text-align: center;
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 270px; /* 0 width - change this with JavaScript */
+  margin-left: 10%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #5655da; /* Black*/
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  padding: 40px 30px 0 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 0px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #d8d8e9;
+  display: block;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f74470
 }
 
-.App-header {
-  min-height: 100vh;
+.sidenav a.active{
+  color: #f74470;
+}
+
+.avatar{
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  margin: 0 auto;
+} 
+
+.avatar img{
+  width: 100%;
+  border-radius: 50%;
+  
+}
+
+.name {
+  color: white;
+
+}
+
+.name h1{
+  font-size: 1.7em;
+  margin: 20px auto 5px auto;
+  
+}
+
+.contact{
+  font-size: 12px;
+  color:white;
+  margin-top: 20px;;
+}
+
+.contact h3 {
+  margin-bottom: 0;;
+}
+
+.contact ul {
+  list-style-type: none;
+  padding:0;
+  margin: 0;
+}
+
+.contact ul li {
+  padding: 5px 0 5px 0;
+}
+
+.social-list {
+  color:white;
+  margin: 20px auto;
+  margin-left: -6px;
+}
+
+.social-list a {
+  display: inline-block;
+}
+
+
+/* Mobile navigation button */
+
+#mobile-nav {
+    background:rgba(12, 12, 12,0.75);
+    height:60px;
+    width: 60px;
+    position:absolute;
+    right: -60px;
+    z-index: 2;
+    margin-left: 0;
+    display: none;
+    top:50px;
+}
+
+#mobile-nav span{
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 60%;
+  background: white;
+  border-radius: 9px;
+  opacity: 1;
+  left: 18%;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#mobile-nav span:nth-child(1) {
+  top: 13px;
+}
+
+#mobile-nav span:nth-child(2), #mobile-nav span:nth-child(3) {
+  top: 28px;
+}
+
+#mobile-nav span:nth-child(4) {
+  top: 43px;
+}
+
+#mobile-nav.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#mobile-nav.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#mobile-nav.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#mobile-nav.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+/* Main */
+
+#main {
+  margin-left: calc(250px + 10%);
+  transition: .5s;
+  padding: 20px 50px 20px 65px;
+  background: white;
+  width: 740px;
+}
+
+/* Section */
+
+section {
+  padding-bottom: 50px;
+  border-bottom: solid 1px #EEE;
+}
+
+section p {
+  text-align: justify;
+}
+
+section h3 {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  text-align: justify;
+}
+
+section span {
+  color:gray;
+  font-size: 14px;
+}
+
+.section-header {
+  margin: 50px auto;
+}
+
+.section-header h2 {
+  color: #f74470;
+  text-transform: uppercase;
+}
+
+#publications h3, #certificates h3 {
+  text-transform: capitalize;
+  text-align: justify;
+}
+
+.resume-download {
+  float:right;
+  background-color: #5655da;
+  color:white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.skills-container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.skills-container > div {
+  flex-grow: 1;
+  flex-basis: 45%;
+  min-width: 200px;
+  margin-right: 10px;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
+.skills-container > div p span{
+  float: right;
+}
+
+/* Container for skill bars */
+.container {
+  width: 100%; /* Full width */
+  background-color: #ddd; /* Grey background */
+  
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  color: white; /* White text color */
+  min-height: 5px;
+  transition: 2s;
+  background-color: #f74470;
+}
+
+.js {width: 90%;} 
+.reactjs {width: 85%;} 
+.expressjs {width: 75%;} 
+.nodejs {width: 75%;} 
+.docker {width: 70%;} 
+.linux {width: 60%;} 
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-width: 991px) {
+  .sidenav { margin-left: 0; transform: translateX(-270px);}
+  .sidenav a {font-size: 18px;}
+
+  #mobile-nav {
+    display: block;
   }
-  50% {
-    transform: translateY(10px);
+
+  .pushed {
+    transform:translateX(0px)
   }
-  100% {
-    transform: translateY(0px);
+
+  #main{
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .main-pushed{
+    transform:translateX(270px)
   }
 }
+

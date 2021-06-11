@@ -151,7 +151,7 @@ function App() {
           </div>
           <div>
             <h4>Others</h4>
-            <p> CSS, Git, MongoDB, Python, Gulp, Typescript, Django, WordPress, GCP, AWS and more to learn...</p>
+            <p> CSS, Redux, Webpack, Git, MongoDB, Python, Gulp, Typescript, Django, WordPress, GCP, AWS and more to learn...</p>
           </div>
         </section>
 

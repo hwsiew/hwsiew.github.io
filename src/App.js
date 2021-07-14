@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-// import logo from './logo.svg';
-// import { Counter } from './features/counter/Counter';
 import './App.css';
-import { Link } from "react-scroll";
-
+import {
+  BrowserRouter as Router,
+} from "react-router-dom";
+import { NavHashLink  as Link } from 'react-router-hash-link';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -16,7 +16,7 @@ function App() {
   const [ toggle , setToggle ] = useState(false);
 
   return (
-    <React.Fragment>
+    <Router>
       <header id="mySidenav" className={toggle ? 'sidenav pushed' : 'sidenav'}>
         <div id="mobile-nav" className={toggle ? 'open' : ''} onClick={() => setToggle(!toggle) }>
           <span></span>
@@ -51,47 +51,25 @@ function App() {
           </a>
         </div>
 
-        <Link
-            activeClass="active"
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-        >About Me</Link>
-        <Link
-            activeClass="active"
-            to="experience"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-        >Experience</Link>
-        <Link
-            activeClass="active"
-            to="education"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-        >Education</Link>
-        <Link
-            activeClass="active"
-            to="publications"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-        >Publications</Link>
-        <Link
-            activeClass="active"
-            to="certificates"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-        >Certificates</Link>
+        <ul id="nav">
+          <li>
+            <Link smooth to="#about" activeClassName="active">About Me</Link>
+          </li>
+          <li>
+            <Link smooth to="#experience" activeClassName="active">Experience</Link>
+          </li>
+          <li>
+            <Link smooth to="#education" activeClassName="active">Education</Link>
+          </li>
+          <li>
+            <Link smooth to="#publications" activeClassName="active">Publications</Link>
+          </li>
+          <li>
+            <Link smooth to="#certificates" activeClassName="active">Certificates</Link>
+          </li>
+        </ul>
       </header>
+
       <div id="main" className={toggle ? 'main-pushed' : ''}>
 
         {/* About */}
@@ -281,7 +259,7 @@ function App() {
         </section>
     
       </div>
-    </React.Fragment>
+    </Router>
   );
 }
 

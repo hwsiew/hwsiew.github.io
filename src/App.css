@@ -9,7 +9,7 @@
   left: 0;
   background-color: #5655da; /* Black*/
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  padding: 40px 30px 0 30px;
+  padding: 40px 0 0 30px;
 }
 
 /* The navigation menu links */
@@ -30,6 +30,9 @@
 
 .sidenav a.active{
   color: #f74470;
+  background-color: white;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius:15px;
 }
 
 .avatar{
@@ -251,6 +254,46 @@ section span {
 .nodejs {width: 75%;} 
 .docker {width: 70%;} 
 .linux {width: 60%;} 
+
+/*
+  Navigation
+*/
+ul#nav{
+  position: relative;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+
+ul#nav li a {
+  position: relative;
+  padding-left:10px;
+}
+
+
+ul#nav li a.active::before{
+  content: '';
+  position: absolute;
+  right:0;
+  top:-30px;
+  width: 30px;
+  height:30px;
+  background: #5655da;
+  border-radius: 50%;
+  box-shadow: 15px 15px 0 white;
+}
+
+ul#nav li a.active::after{
+  content: '';
+  position: absolute;
+  right:0;
+  bottom:-30px;
+  width: 30px;
+  height:30px;
+  background: #5655da;
+  border-radius: 50%;
+  box-shadow: 15px -15px 0 white;
+}
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-width: 991px) {

@@ -181,7 +181,7 @@ function App() {
           </div>
           <div>
             <h3>Bachelor of Computer Science</h3>
-            <span>Multimedia University | Jun, 2009 - Nov, 2011</span>
+            <span>Multimedia University | Jun, 2009 - Nov, 2012</span>
             <ul>
               <li>First Class Honors with CGPA: 3.91/4</li>
             </ul>

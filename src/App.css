@@ -1,3 +1,8 @@
+body {
+  background-color: #5352d4;
+  /* background-color: #121212; */
+}
+
 /* The side navigation menu */
 .sidenav {
   height: 100%; /* 100% Full-height */
@@ -7,7 +12,8 @@
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: #5655da; /* Black*/
+  /* background-color: rgba(155, 26, 26, 0.02);  */
+  background-color: #5655da;
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   padding: 40px 0 0 30px;
 }
@@ -93,15 +99,15 @@
 /* Mobile navigation button */
 
 #mobile-nav {
-    background:rgba(12, 12, 12,0.75);
-    height:60px;
-    width: 60px;
-    position:absolute;
-    right: -60px;
-    z-index: 2;
-    margin-left: 0;
-    display: none;
-    top:50px;
+  background:rgba(12, 12, 12,0.5);
+  height:40px;
+  width: 40px;
+  position:absolute;
+  right: -40px;
+  z-index: 2;
+  margin-left: 0;
+  display: none;
+  top:50px;
 }
 
 #mobile-nav span{
@@ -166,45 +172,49 @@
 #main {
   margin-left: calc(250px + 10%);
   transition: .5s;
-  padding: 20px 50px 20px 65px;
+  /* padding: 20px 50px 20px 65px; */
   background: white;
   width: 740px;
 }
 
 /* Section */
 
-section {
+/* section {
   padding-bottom: 50px;
   border-bottom: solid 1px #EEE;
-}
+} */
 
-section p {
+/* section p {
   text-align: justify;
-}
+} */
 
-section h3 {
+/* section h3 {
   margin-bottom: 0;
   text-transform: uppercase;
   text-align: justify;
-}
+} */
 
-section span {
+/* section span {
   color:gray;
   font-size: 14px;
-}
+} */
 
-.section-header {
+/* .section-header {
   margin: 50px auto;
-}
+} */
 
-.section-header h2 {
+/* .section-header h2 {
   color: #f74470;
   text-transform: uppercase;
-}
+} */
 
 #publications h3, #certificates h3 {
   text-transform: capitalize;
   text-align: justify;
+}
+
+#npm-packages h3{
+  text-transform: none;
 }
 
 .resume-download {

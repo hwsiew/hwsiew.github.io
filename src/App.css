@@ -6,10 +6,16 @@ body {
   overflow-x: hidden;
 }
 
+.wrapper {
+  width: 270px;
+  position: relative;
+  margin-left: 10%;
+}
+
 /* The side navigation menu */
 .sidenav {
+  width:270px;
   height: 100%; /* 100% Full-height */
-  width: 270px; /* 0 width - change this with JavaScript */
   margin-left: 10%;
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
@@ -81,7 +87,7 @@ ion-icon {
 /* Main */
 
 #main {
-  margin-left: calc(270px + 10%);
+  /* margin-left: calc(270px + 10%); */
   transition: .5s;
   background: white;
   width: 740px;
@@ -157,7 +163,7 @@ ul#nav li a {
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-width: 991px) {
-  .sidenav { margin-left: 0; transform: translateX(-270px);}
+  .sidenav { margin-left: 0; transform: translateX(-270px); }
   .sidenav a {font-size: 18px;}
 
   #mobile-nav {
@@ -171,6 +177,11 @@ ul#nav li a {
   #main{
     margin-left: 0;
     width: 100%;
+  }
+
+  .wrapper {
+    width: 0;
+    margin-left: 0;
   }
 
   .main-pushed{

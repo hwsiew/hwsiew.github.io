@@ -36,70 +36,77 @@ function App() {
     setTheme(_theme);
   }
 
+  const handleToggleMenu = function(){
+    setToggle(!toggle) 
+  }
+
   return (
-    <div className="w-full bg-gray-300 dark:bg-black">
+   
     <Router>
-      <header id="mySidenav" className={classNames('sidenav bg-transparent shadow-lg overflow-y-auto', {'pushed': toggle})}>
-        <div className="avatar relative">
-          <img src="/me.jpg" alt="avatar"></img>
-          <button className="absolute -bottom-2 -right-2 bg-white rounded-full p-2 flex">
-            <ion-icon name={theme === 'light' ? 'sunny-outline' : 'moon'} onClick={handleToggleTheme} style={{fontSize:32}}></ion-icon>
-          </button>
-        </div>
-        <div className="text-gray-700 dark:text-white pt-5">
-          <h1 className="text-3xl">Hong Wei, Siew </h1>
-          <span className="text-lg">Full Stack Engineer</span>
-        </div>
-        <div className="text-gray-700 dark:text-white py-5 text-lg">
-          <h3 className="text-base">Contact Me</h3>
-          <ul>
-            <li style={{display:'flex',alignItems:'center',fontSize:16}}> 
-              <ion-icon name="mail" style={{marginRight:10}}></ion-icon>
-              hw.siew.work@gmail.com
+      <div className="w-full bg-gray-300 dark:bg-black flex">
+      <div className="wrapper">
+        <header id="mySidenav" className={classNames('sidenav shadow-lg overflow-y-auto', {'pushed': toggle})}>
+          <div className="avatar relative">
+            <img src="/me.jpg" alt="avatar"></img>
+            <button className="absolute -bottom-2 -right-2 bg-white rounded-full p-2 flex">
+              <ion-icon name={theme === 'light' ? 'sunny-outline' : 'moon'} onClick={handleToggleTheme} style={{fontSize:32}}></ion-icon>
+            </button>
+          </div>
+          <div className="text-gray-700 dark:text-white pt-5">
+            <h1 className="text-3xl">Hong Wei, Siew </h1>
+            <span className="text-lg">Full Stack Engineer</span>
+          </div>
+          <div className="text-gray-700 dark:text-white py-5 text-lg">
+            <h3 className="text-base">Contact Me</h3>
+            <ul>
+              <li style={{display:'flex',alignItems:'center',fontSize:16}}> 
+                <ion-icon name="mail" style={{marginRight:10}}></ion-icon>
+                hw.siew.work@gmail.com
+              </li>
+              <li style={{display:'flex',alignItems:'center',fontSize:16}}> 
+                <ion-icon name="call" style={{marginRight:10}}></ion-icon>
+                +60 19-679 2120
+              </li>
+            </ul>
+          </div>
+          
+          <div className="flex text-gray-700 dark:text-white social-list py-3">
+            <a href="https://www.linkedin.com/in/hw-siew/" target="_blank" rel="noreferrer">
+              <ion-icon name="logo-linkedin" size="large"></ion-icon>
+            </a>
+            <a href="https://github.com/hwsiew" target="_blank" rel="noreferrer">
+              <ion-icon name="logo-github" size="large" ></ion-icon>
+            </a>
+            <a href="https://stackoverflow.com/users/5150558/hw-siew" target="_blank" rel="noreferrer">
+              <ion-icon name="logo-stackoverflow" size='large'></ion-icon>
+            </a>
+            <a href="https://www.npmjs.com/~hwsiew" target="_blank" rel="noreferrer">
+              <ion-icon name="logo-npm" size='large'></ion-icon>
+            </a>
+          </div>
+
+          <ul id="nav" className="text-gray-700 dark:text-white">
+            <li>
+              <Link smooth to="#about" activeClassName="active" onClick={handleToggleMenu}>About Me</Link>
             </li>
-            <li style={{display:'flex',alignItems:'center',fontSize:16}}> 
-              <ion-icon name="call" style={{marginRight:10}}></ion-icon>
-              +60 19-679 2120
+            <li>
+              <Link smooth to="#experience" activeClassName="active" onClick={handleToggleMenu}>Experience</Link>
+            </li>
+            <li>
+              <Link smooth to="#education" activeClassName="active" onClick={handleToggleMenu}>Education</Link>
+            </li>
+            <li>
+              <Link smooth to="#publications" activeClassName="active" onClick={handleToggleMenu}>Publications</Link>
+            </li>
+            <li>
+              <Link smooth to="#certificates" activeClassName="active" onClick={handleToggleMenu}>Certificates</Link>
+            </li>
+            <li>
+              <Link smooth to="#npm-packages" activeClassName="active" onClick={handleToggleMenu}>NPM Pacakages</Link>
             </li>
           </ul>
-        </div>
-        
-        <div className="flex text-gray-700 dark:text-white social-list py-3">
-          <a href="https://www.linkedin.com/in/hw-siew/" target="_blank" rel="noreferrer">
-            <ion-icon name="logo-linkedin" size="large"></ion-icon>
-          </a>
-          <a href="https://github.com/hwsiew" target="_blank" rel="noreferrer">
-            <ion-icon name="logo-github" size="large" ></ion-icon>
-          </a>
-          <a href="https://stackoverflow.com/users/5150558/hw-siew" target="_blank" rel="noreferrer">
-            <ion-icon name="logo-stackoverflow" size='large'></ion-icon>
-          </a>
-          <a href="https://www.npmjs.com/~hwsiew" target="_blank" rel="noreferrer">
-            <ion-icon name="logo-npm" size='large'></ion-icon>
-          </a>
-        </div>
-
-        <ul id="nav" className="text-gray-700 dark:text-white">
-          <li>
-            <Link smooth to="#about" activeClassName="active">About Me</Link>
-          </li>
-          <li>
-            <Link smooth to="#experience" activeClassName="active">Experience</Link>
-          </li>
-          <li>
-            <Link smooth to="#education" activeClassName="active">Education</Link>
-          </li>
-          <li>
-            <Link smooth to="#publications" activeClassName="active">Publications</Link>
-          </li>
-          <li>
-            <Link smooth to="#certificates" activeClassName="active">Certificates</Link>
-          </li>
-          <li>
-            <Link smooth to="#npm-packages" activeClassName="active">NPM Pacakages</Link>
-          </li>
-        </ul>
-      </header>
+        </header>
+      </div>
 
       <div id="main" className={toggle ? 'main-pushed pt-4 pb-64 bg-white md:px-12 px-11' : 'md:px-12 px-11 pt-4 pb-64 bg-white'}>
         
@@ -310,8 +317,9 @@ function App() {
           ></List>
         </Section>
       </div>
+      </div>
     </Router>
-    </div>
+    
   );
 }
 

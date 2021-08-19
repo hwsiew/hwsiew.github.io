@@ -5,7 +5,8 @@ import {
 } from "react-router-dom";
 import { NavHashLink  as Link } from 'react-router-hash-link';
 import List from './components/List';
-import styled from 'styled-components'
+import styled from 'styled-components';
+import classNames from 'classnames';
 
 const Section = styled.section.attrs(props =>({
   className: 'pb-10 border-b-2 border-gray-300 text-justify'
@@ -21,25 +22,35 @@ const Section = styled.section.attrs(props =>({
 function App() {
 
   const [ toggle , setToggle ] = useState(false);
+  const [ theme, setTheme] = useState(() => {
+    let _theme = localStorage.getItem('theme') || 'light';
+    document.documentElement.classList.add(_theme);
+    return _theme;
+  });
+
+  const handleToggleTheme = function(){
+    document.documentElement.classList.remove(theme);
+    let _theme = theme === 'light' ? 'dark' : 'light';
+    localStorage.setItem('theme', _theme);
+    document.documentElement.classList.add(_theme);
+    setTheme(_theme);
+  }
 
   return (
+    <div className="w-full bg-gray-300 dark:bg-black">
     <Router>
-      <header id="mySidenav" className={toggle ? 'sidenav pushed' : 'sidenav'}>
-        <div id="mobile-nav" className={toggle ? 'open' : ''} onClick={() => setToggle(!toggle) }>
-        <ion-icon name="menu" style={{fontSize:40,color:'white'}}></ion-icon>
-          {/* <span></span>
-          <span></span>
-          <span></span>
-          <span></span> */}
-        </div>
-        <div className="avatar">
+      <header id="mySidenav" className={classNames('sidenav bg-transparent shadow-lg overflow-y-auto', {'pushed': toggle})}>
+        <div className="avatar relative">
           <img src="/me.jpg" alt="avatar"></img>
+          <button className="absolute -bottom-2 -right-2 bg-white rounded-full p-2 flex">
+            <ion-icon name={theme === 'light' ? 'sunny-outline' : 'moon'} onClick={handleToggleTheme} style={{fontSize:32}}></ion-icon>
+          </button>
         </div>
-        <div className="name">
-          <h1>Hong Wei, Siew </h1>
-          <span>Full Stack Engineer</span>
+        <div className="text-gray-700 dark:text-white pt-5">
+          <h1 className="text-3xl">Hong Wei, Siew </h1>
+          <span className="text-lg">Full Stack Engineer</span>
         </div>
-        <div className="contact">
+        <div className="text-gray-700 dark:text-white py-5 text-lg">
           <h3 className="text-base">Contact Me</h3>
           <ul>
             <li style={{display:'flex',alignItems:'center',fontSize:16}}> 
@@ -53,12 +64,12 @@ function App() {
           </ul>
         </div>
         
-        <div className="social-list">
-          <a  href="https://www.linkedin.com/in/hw-siew/" target="_blank" rel="noreferrer">
+        <div className="flex text-gray-700 dark:text-white social-list py-3">
+          <a href="https://www.linkedin.com/in/hw-siew/" target="_blank" rel="noreferrer">
             <ion-icon name="logo-linkedin" size="large"></ion-icon>
           </a>
           <a href="https://github.com/hwsiew" target="_blank" rel="noreferrer">
-            <ion-icon name="logo-github" size="large"></ion-icon>
+            <ion-icon name="logo-github" size="large" ></ion-icon>
           </a>
           <a href="https://stackoverflow.com/users/5150558/hw-siew" target="_blank" rel="noreferrer">
             <ion-icon name="logo-stackoverflow" size='large'></ion-icon>
@@ -68,7 +79,7 @@ function App() {
           </a>
         </div>
 
-        <ul id="nav">
+        <ul id="nav" className="text-gray-700 dark:text-white">
           <li>
             <Link smooth to="#about" activeClassName="active">About Me</Link>
           </li>
@@ -91,6 +102,11 @@ function App() {
       </header>
 
       <div id="main" className={toggle ? 'main-pushed pt-4 pb-64 bg-white md:px-12 px-11' : 'md:px-12 px-11 pt-4 pb-64 bg-white'}>
+        
+        {/* MOBILE TOGGLE */}
+        <div id="mobile-nav" className={classNames('cursor-pointer',{open: toggle})} onClick={() => setToggle(!toggle) }>
+          <ion-icon name="menu" style={{fontSize:40,color:'white'}}></ion-icon>
+        </div>
 
         {/* About */}
         <Section  id="about">
@@ -98,7 +114,7 @@ function App() {
             <a 
               href="/Hong Wei, Siew-20210512.pdf"
               target="_blank"
-              className="resume-download">Download Resume</a>
+              className="resume-download bg-gray-700">Download Resume</a>
             <h2 className={'text-2xl'}>About me</h2>
           </div>
           <div>
@@ -295,6 +311,7 @@ function App() {
         </Section>
       </div>
     </Router>
+    </div>
   );
 }
 

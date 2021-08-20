@@ -7,6 +7,7 @@ import { NavHashLink  as Link } from 'react-router-hash-link';
 import List from './components/List';
 import styled from 'styled-components';
 import classNames from 'classnames';
+import 'boxicons'
 
 const Section = styled.section.attrs(props =>({
   className: 'pb-10 border-b-2 border-gray-300 text-justify'
@@ -50,8 +51,8 @@ function App() {
           <header id="mySidenav" className={classNames('sidenav shadow-lg overflow-y-auto', {'pushed': toggle})}>
             <div className="avatar relative">
               <img src="/me.jpg" alt="avatar"></img>
-              <button className="absolute -bottom-2 -right-2 bg-white rounded-full p-2 flex">
-                <ion-icon name={theme === 'light' ? 'sunny-outline' : 'moon'} onClick={handleToggleTheme} style={{fontSize:32}}></ion-icon>
+              <button className="absolute -bottom-2 -right-2 bg-white rounded-full p-2 flex" onClick={handleToggleTheme}>
+                <box-icon name={theme === 'light' ? 'sun' : 'moon'} ></box-icon>
               </button>
             </div>
             <div className="text-gray-700 dark:text-white pt-5">
@@ -59,31 +60,28 @@ function App() {
               <span className="text-lg">Full Stack Engineer</span>
             </div>
             <div className="text-gray-700 dark:text-white py-5 text-lg">
-              <h3 className="text-base">Contact Me</h3>
+              <h3 className="text-base font-medium">Contact Me</h3>
               <ul>
                 <li style={{display:'flex',alignItems:'center',fontSize:16}}> 
-                  <ion-icon name="mail" style={{marginRight:10}}></ion-icon>
-                  hw.siew.work@gmail.com
+                  <box-icon type='solid' name='envelope' size="24px" color="currentColor"></box-icon>
+                  <span class="pl-1">hw.siew.work@gmail.com</span>
                 </li>
                 <li style={{display:'flex',alignItems:'center',fontSize:16}}> 
-                  <ion-icon name="call" style={{marginRight:10}}></ion-icon>
-                  +60 19-679 2120
+                  <box-icon type='solid' name='phone-call' size="24px" color="currentColor"></box-icon>
+                  <span class="pl-1">+60 19-679 2120</span>
                 </li>
               </ul>
             </div>
             
             <div className="flex text-gray-700 dark:text-white social-list py-3">
               <a href="https://www.linkedin.com/in/hw-siew/" target="_blank" rel="noreferrer">
-                <ion-icon name="logo-linkedin" size="large"></ion-icon>
+                <box-icon name='linkedin-square' type='logo' color="currentColor" size="38px"></box-icon>
               </a>
               <a href="https://github.com/hwsiew" target="_blank" rel="noreferrer">
-                <ion-icon name="logo-github" size="large" ></ion-icon>
+                <box-icon name='github' type='logo' color="currentColor" size="38px"></box-icon>
               </a>
               <a href="https://stackoverflow.com/users/5150558/hw-siew" target="_blank" rel="noreferrer">
-                <ion-icon name="logo-stackoverflow" size='large'></ion-icon>
-              </a>
-              <a href="https://www.npmjs.com/~hwsiew" target="_blank" rel="noreferrer">
-                <ion-icon name="logo-npm" size='large'></ion-icon>
+                <box-icon name='stack-overflow' type='logo' color="currentColor" size="38px"></box-icon>
               </a>
             </div>
 
@@ -117,7 +115,7 @@ function App() {
           
           {/* MOBILE TOGGLE */}
           <div id="mobile-nav" className={classNames('cursor-pointer',{open: toggle})} onClick={() => setToggle(!toggle) }>
-            <ion-icon name="menu" style={{fontSize:40,color:'white'}}></ion-icon>
+            <box-icon name='menu' color="white" size="40px"></box-icon>
           </div>
 
           {/* About */}
@@ -126,7 +124,10 @@ function App() {
               <a 
                 href="/Hong Wei, Siew-20210512.pdf"
                 target="_blank"
-                className="resume-download bg-gray-700">Download Resume</a>
+                className="resume-download bg-gray-700 flex items-center p-2"> 
+                <box-icon name='download' color="white"></box-icon>
+                <span class="ml-2">Download Resume</span>
+              </a>
               <h2 className={'text-2xl'}>About me</h2>
             </div>
             <div>

@@ -7,7 +7,8 @@ import { NavHashLink  as Link } from 'react-router-hash-link';
 import List from './components/List';
 import styled from 'styled-components';
 import classNames from 'classnames';
-import 'boxicons'
+import 'boxicons';
+import Chip from './components/Chip';
 
 const Section = styled.section.attrs(props =>({
   className: 'pb-10 border-b-2 border-gray-300 text-justify'
@@ -43,6 +44,50 @@ function App() {
 
   // to select active menu tab on page load if hash is not available
   let hash = window.location.hash;
+
+  let others = [
+    {
+      title: 'Git',
+      icon: 'git'
+    },
+    {
+      title: 'CSS',
+      icon: 'css3'
+    },
+    {
+      title: 'Tailwind',
+      icon: 'tailwind-css'
+    },
+    {
+      title: 'Redux',
+      icon: 'redux'
+    },{
+      title: 'Python',
+      icon: 'python'
+    },{
+      title: 'Wordpress',
+      icon: 'wordpress'
+    },{
+      title: 'AWS',
+      icon: 'aws'
+    },{
+      title: 'Google Cloud',
+      icon: 'google-cloud'
+    },{
+      title: 'VueJS',
+      icon: 'vuejs'
+    },{
+      title: 'Styled-component'
+    },{
+      title: 'Webpack'
+    },{
+      title: 'MongoDB'
+    },{
+      title: 'Gulp'
+    },{
+      title: 'Typescript'
+    }
+  ];
 
   return (
     <Router>
@@ -172,13 +217,18 @@ function App() {
               <div className={'mt-3 mb-3'}>
                 <p>Linux <span>60%</span></p>
                 <div className="container">
-                  <div className="skills linux"></div>
+                  <div className="skills linux"></div> 
                 </div>
               </div>
             </div>
             <div className={'mt-3 mb-3'}>
-              <h4>Others</h4>
-              <p> Styled-components, Tailwind CSS, CSS, Redux, Webpack, Git, MongoDB, Python, Gulp, Typescript, Django, WordPress, GCP, AWS and more to learn...</p>
+              <h4 className="font-medium">Others</h4>
+              <div className="skills-chips flex flex-wrap items-center justify-between">
+                {
+                  others.map((e,i) => <Chip key={i} icon={e.icon}>{e.title}</Chip>)
+                } 
+                and more to learn...
+              </div>
             </div>
           </Section>
 

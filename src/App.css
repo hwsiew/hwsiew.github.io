@@ -208,3 +208,8 @@ ul#nav li a {
   }
 }
 
+/* to align left for last row of flex warp */
+.skills-chips::after {
+  content: '';
+  flex:auto;
+}

@@ -9,6 +9,11 @@ import styled from 'styled-components';
 import classNames from 'classnames';
 import 'boxicons';
 import Chip from './components/Chip';
+import Card from './components/Card';
+import loginTemplatesImg from './assets/login-templates.png';
+import movieTicketingImg from './assets/movie-ticketing.png';
+import movieSearchImg from './assets/movie-search.png';
+import reactUiComponentsImg from './assets/react-ui-components.png';
 
 const Section = styled.section.attrs(props =>({
   className: 'pb-10 border-b-2 border-gray-300 text-justify'
@@ -86,6 +91,12 @@ function App() {
       title: 'Gulp'
     },{
       title: 'Typescript'
+    },{
+      title: 'Storybook'
+    }, {
+      title: 'REST API'
+    }, {
+      title: 'GraphQL'
     }
   ];
 
@@ -150,7 +161,7 @@ function App() {
                 <Link smooth to="#npm-packages" activeClassName="active" onClick={handleToggleMenu}>NPM Pacakages</Link>
               </li>
               <li>
-                <Link smooth to="#repositories" activeClassName="active" onClick={handleToggleMenu}>Repositories</Link>
+                <Link smooth to="#projects" activeClassName="active" onClick={handleToggleMenu}>Projects</Link>
               </li>
             </ul>
           </header>
@@ -373,9 +384,104 @@ function App() {
             ></List>
           </Section>
           
-          <Section id="repositories">
-            <h2>Repositories</h2>
-            coming soon...
+          <Section id="projects">
+            <h2>Projects</h2>
+            <Card 
+              title="Movie Ticketing App" 
+              subtitle="Full stack containerized movie ticketing app using ReactJs + Spring Boot + MongoDB Altas."
+              imageUrl={movieTicketingImg}
+            > 
+              <div className="text-right mt-2">
+                <a 
+                  className="bg-gray-500 inline-block p-1 rounded mr-2 cursor-pointer"
+                  target="_blank"
+                  href="https://hwsiew.github.io/movie-ticketing/"
+                  rel="noreferrer"
+                >
+                  <div className="flex"><box-icon name='link-external' color="white"></box-icon></div>                
+                </a>
+                <a 
+                  className="bg-gray-500 inline-block p-1 rounded cursor-pointer"
+                  target="_blank"
+                  href="https://github.com/hwsiew/movie-ticketing"
+                  rel="noreferrer"
+                >
+                  <div className="flex"><box-icon name='github' type='logo' color="white"></box-icon></div>                
+                </a>
+              </div>
+            </Card>
+            <Card 
+              title="Login Templates" 
+              subtitle="Ready to use login templates using vanilla js and css"
+              imageUrl={loginTemplatesImg}
+            > 
+              <div className="text-right mt-2">
+                <a 
+                  className="bg-gray-500 inline-block p-1 rounded mr-2 cursor-pointer"
+                  target="_blank"
+                  href="https://hwsiew.github.io/login-templates/"
+                  rel="noreferrer"
+                >
+                  <div className="flex"><box-icon name='link-external' color="white"></box-icon></div>                
+                </a>
+                <a 
+                  className="bg-gray-500 inline-block p-1 rounded cursor-pointer"
+                  target="_blank"
+                  href="https://github.com/hwsiew/login-templates"
+                  rel="noreferrer"
+                >
+                  <div className="flex"><box-icon name='github' type='logo' color="white"></box-icon></div>                
+                </a>
+              </div>
+            </Card>
+            <Card 
+              title="Movie Search App" 
+              subtitle="ReactJS SPA to search movie via OMDb API"
+              imageUrl={movieSearchImg}
+            > 
+              <div className="text-right mt-2">
+                <a 
+                  className="bg-gray-500 inline-block p-1 rounded mr-2 cursor-pointer"
+                  target="_blank"
+                  href="https://hwsiew.github.io/movie-search/"
+                  rel="noreferrer"
+                >
+                  <div className="flex"><box-icon name='link-external' color="white"></box-icon></div>                
+                </a>
+                <a 
+                  className="bg-gray-500 inline-block p-1 rounded cursor-pointer"
+                  target="_blank"
+                  href="https://github.com/hwsiew/movie-search"
+                  rel="noreferrer"
+                >
+                  <div className="flex"><box-icon name='github' type='logo' color="white"></box-icon></div>                
+                </a>
+              </div>
+            </Card>
+            <Card 
+              title="React UI Components" 
+              subtitle="Custom ReactJS components with Storybook."
+              imageUrl={reactUiComponentsImg}
+            > 
+              <div className="text-right mt-2">
+                <a 
+                  className="bg-gray-500 inline-block p-1 rounded mr-2 cursor-pointer"
+                  target="_blank"
+                  href="https://hwsiew.github.io/react-ui-components/"
+                  rel="noreferrer"
+                >
+                  <div className="flex"><box-icon name='link-external' color="white"></box-icon></div>                
+                </a>
+                <a 
+                  className="bg-gray-500 inline-block p-1 rounded cursor-pointer"
+                  target="_blank"
+                  href="https://github.com/hwsiew/react-ui-components"
+                  rel="noreferrer"
+                >
+                  <div className="flex"><box-icon name='github' type='logo' color="white"></box-icon></div>                
+                </a>
+              </div>
+            </Card>
           </Section>
         </div>
       </div>

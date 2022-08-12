@@ -90,7 +90,7 @@ function App() {
     },{
       title: 'Gulp'
     },{
-      title: 'Typescript'
+      title: 'Linux'
     },{
       title: 'Storybook'
     }, {
@@ -178,7 +178,7 @@ function App() {
           <Section  id="about">
             <div className="section-header">
               <a 
-                href="/Hong Wei, Siew-20210512.pdf"
+                href="/resume.pdf"
                 target="_blank"
                 className="resume-download bg-gray-700 flex items-center p-2"> 
                 <box-icon name='download' color="white"></box-icon>
@@ -188,7 +188,7 @@ function App() {
             </div>
             <div>
               <p className={'mt-3 mb-3'}>
-                I am an experienced Full Stack Web Engineer with holistic knowledge of software development and design. Since 2015, I have participated in various small and mid-scale web developments.  I am familiar with a number of programming languages, frameworks, and tools such as MERN stack, VueJs, Typescript, jQuery, Bootstrap, Docker, Git, Webpack, WordPress, Python, Django, Nginx, and Linux server configuration using GCP and AWS.  
+              I am an experienced Full Stack Web Engineer with holistic knowledge of software design and development. Since 2015, I have participated in various small to large-scale web developments. This includes multilingual & multi-regional web applications. I am familiar with the end-to-end web development processes. Including but not limited to Nginx as reverse proxy, Express for REST API development, custom design system using Storybook.js, React for front-end, Webpack+Babel for application bundling, Jest for unit testing, Cypress for e2e testing, docker for image building, Github workflow for CI/CD pipeline, and AWS/GCP for application deployment.
               </p>
               <p className={'mt-3 mb-3'}>
                 I have also experience in algorithm design with proven track records and publications.  I am a self-motivated and self-taught professional who likes to solve problems. 
@@ -196,19 +196,19 @@ function App() {
             </div>
             <div className="skills-container">
               <div className={'mt-3 mb-3'}>
-                <p>JavaScript <span>90%</span></p>
+                <p>JavaScript <span>95%</span></p>
                 <div className="container">
                   <div className="skills js"></div>
                 </div>
               </div>
               <div className={'mt-3 mb-3'}>
-                <p>ReactJs <span>85%</span></p>
+                <p>ReactJs <span>90%</span></p>
                 <div className="container">
                   <div className="skills reactjs"></div>
                 </div>
               </div>
               <div className={'mt-3 mb-3'}>
-                <p>ExpressJs <span>75%</span></p>
+                <p>Typescript <span>85%</span></p>
                 <div className="container">
                   <div className="skills expressjs"></div>
                 </div>
@@ -220,13 +220,13 @@ function App() {
                 </div>
               </div>
               <div className={'mt-3 mb-3'}>
-                <p>Docker <span>70%</span></p>
+                <p>ExpressJs <span>75%</span></p>
                 <div className="container">
                   <div className="skills docker"></div>
                 </div>
               </div>
               <div className={'mt-3 mb-3'}>
-                <p>Linux <span>60%</span></p>
+                <p>Docker <span>70%</span></p>
                 <div className="container">
                   <div className="skills linux"></div> 
                 </div>
@@ -246,7 +246,12 @@ function App() {
           {/* Experience */}
           <Section id="experience">
             <h2>Experience</h2>
-            <List title="Research Engineer" subtitle="Multimedia University | Jan, 2019 - PRESENT">
+            <List title="Frontend Engineer" subtitle="foodpanda | Oct, 2021 - Present">
+              <li>Maintaining corporate features in the foodpanda/foodora web across countries</li>
+              <li>Leading a project to deprecate a legacy back-office and migrate it over to an internal portal</li>
+              <li>Leading a new project to develop a dashboard for corporate admin-related functionalities.</li>
+            </List>
+            <List title="Research Engineer" subtitle="Multimedia University | Jan, 2019 - March, 2021">
               <li>Collaborated with the largest ISP in Malaysia</li>
               <li>Design and develop algorithms for network migration</li>
               <li>Integrate the proposed algorithms into next-gen network operation and monitoring systems</li>

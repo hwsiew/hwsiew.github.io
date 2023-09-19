@@ -243,29 +243,38 @@ function App() {
             </div>
           </Section>
 
-          {/* Experience */}
-          <Section id="experience">
-            <h2>Experience</h2>
-            <List title="Frontend Engineer" subtitle="foodpanda | Oct, 2021 - Present">
-              <li>Maintaining corporate features in the foodpanda/foodora web across countries</li>
-              <li>Leading a project to deprecate a legacy back-office and migrate it over to an internal portal</li>
-              <li>Leading a new project to develop a dashboard for corporate admin-related functionalities.</li>
-            </List>
-            <List title="Research Engineer" subtitle="Multimedia University | Jan, 2019 - March, 2021">
-              <li>Collaborated with the largest ISP in Malaysia</li>
-              <li>Design and develop algorithms for network migration</li>
-              <li>Integrate the proposed algorithms into next-gen network operation and monitoring systems</li>
-              <li>1 patent had been filed</li>
-            </List>
-            <List title='Full Stack Web Engineer' subtitle='Treazpass Advertising Sdn Bhd | Jan, 2017 - Dec, 2018'>
-              <li>End-to-end web application development as per client requirement</li>
-              <li>Completed and successfully launched a number of mid-scale projects using various technology stacks.</li>
-            </List>
-            <List title="Full Stack Web Engineer" subtitle="Thesigner | Sept, 2015 - Dec, 2016">
-              <li>A startup to develop an online marketplace for fashion designer</li>
-              <li>Responsible for all aspects of product development from design, development to deployment over public cloud.</li>
-            </List>
-          </Section>
+        {/* Experience */}
+        <Section id="experience">
+          <h2>Experience</h2>
+          <List title="Senior Frontend Engineer" subtitle="foodpanda | Jan, 2023 - PRESENT">
+            <li>Part of a team to refresh the foodpanda/foodora website across countries</li>
+            <li>Working in collaboration with cross functional teams to enrich the looks and feel of the website</li>
+          </List>
+          <List title="Frontend Engineer" subtitle="foodpanda | Oct, 2021 - Dec, 2022">
+            <li>Maintained corporate features in the foodpanda/foodora web across countries</li>
+            <li>Led a project to deprecate a legacy back-office and migrate it over to an internal portal</li>
+            <li>Led a new project to develop a dashboard for corporate admin-related functionalities</li>
+          </List>
+          <List title='Full Stack Web Engineer' subtitle='Treazpass Advertising Sdn Bhd | April, 2020 - Sept, 2021'>
+            <li>Developed and maintained an internal ordering and accounting web application</li>
+            <li>Aligned with sales and admin teams to prioritize functionalities</li>
+            <li>End-to-end web application development as per client requirement</li>
+          </List>
+          <List title="Research Engineer" subtitle="Multimedia University | Jan, 2019 - March, 2020">
+            <li>Collaborated with the largest ISP in Malaysia</li>
+            <li>Design and develop algorithms for network migration</li>
+            <li>Integrate the proposed algorithms into next-gen network operation and monitoring systems</li>
+            <li>1 patent had been filed</li>
+          </List>
+          <List title='Full Stack Web Engineer' subtitle='Treazpass Advertising Sdn Bhd | Jan, 2017 - Dec, 2018'>
+            <li>End-to-end web application development as per client requirement</li>
+            <li>Completed and successfully launched a number of mid-scale projects using various technology stacks.</li>
+          </List>
+          <List title="Full Stack Web Engineer" subtitle="Thesigner | Sept, 2015 - Dec, 2016">
+            <li>A startup to develop an online marketplace for fashion designer</li>
+            <li>Responsible for all aspects of product development from design, development to deployment over public cloud.</li>
+          </List>
+        </Section>
 
           {/* Eduction */}
           <Section id="education">

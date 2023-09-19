@@ -246,11 +246,11 @@ function App() {
         {/* Experience */}
         <Section id="experience">
           <h2>Experience</h2>
-          <List title="Senior Frontend Engineer" subtitle="Foodpanda | Jan, 2023 - PRESENT">
+          <List title="Senior Frontend Engineer" subtitle="foodpanda | Jan, 2023 - PRESENT">
             <li>Part of a team to refresh the foodpanda/foodora website across countries</li>
             <li>Working in collaboration with cross functional teams to enrich the looks and feel of the website</li>
           </List>
-          <List title="Frontend Engineer" subtitle="Foodpanda | Oct, 2021 - Dec, 2022">
+          <List title="Frontend Engineer" subtitle="foodpanda | Oct, 2021 - Dec, 2022">
             <li>Maintained corporate features in the foodpanda/foodora web across countries</li>
             <li>Led a project to deprecate a legacy back-office and migrate it over to an internal portal</li>
             <li>Led a new project to develop a dashboard for corporate admin-related functionalities</li>
